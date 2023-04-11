@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net6.0</TargetFrameworks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(IsWindows)' == 'true' ">
+    <TargetFrameworks>$(TargetFrameworks);net462</TargetFrameworks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Ionic.Zlib.Core" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="Newtonsoft.Json" />
+    <PackageReference Include="NUnit" />
+    <PackageReference Include="NUnit3TestAdapter" />
+    <PackageReference Include="OpenTelemetry.Exporter.Jaeger" />
+    <PackageReference Include="SharpZipLib" />
+    <ProjectReference Include="..\..\src\MassTransit.TestFramework\MassTransit.TestFramework.csproj" />
+    <ProjectReference Include="..\..\src\MassTransit\MassTransit.csproj" />
+    <ProjectReference Include="..\..\src\Transports\MassTransit.ActiveMqTransport\MassTransit.ActiveMqTransport.csproj" />
+    <ProjectReference Include="..\..\src\Scheduling\MassTransit.QuartzIntegration\MassTransit.QuartzIntegration.csproj" />
+  </ItemGroup>
+
+</Project>

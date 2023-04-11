@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;netstandard2.1;net6.0</TargetFrameworks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(IsWindows)' == 'true' ">
+    <TargetFrameworks>$(TargetFrameworks);net462</TargetFrameworks>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <RootNamespace>MassTransit</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>MassTransit.Redis</PackageId>
+    <Title>MassTransit.Redis</Title>
+    <PackageTags>MassTransit;Redis</PackageTags>
+    <Description>MassTransit Redis persistence support; $(Description)</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="StackExchange.Redis" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
+    <ProjectReference Include="..\..\MassTransit\MassTransit.csproj" />
+  </ItemGroup>
+
+</Project>

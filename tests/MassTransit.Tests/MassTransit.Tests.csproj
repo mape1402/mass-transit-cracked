@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net6.0</TargetFrameworks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(IsWindows)' == 'true' ">
+    <TargetFrameworks>$(TargetFrameworks);net462</TargetFrameworks>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net462'">
+    <Reference Include="System.Transactions" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="NewConfigurationModel.cs" />
+    <Compile Remove="Saga\SagaTestContext.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" />
+    <PackageReference Include="Google.Protobuf" />
+    <PackageReference Include="MathNet.Numerics" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="NUnit" />
+    <PackageReference Include="NUnit3TestAdapter" />
+    <ProjectReference Include="..\..\src\MassTransit.Interop.NServiceBus\MassTransit.Interop.NServiceBus.csproj" />
+    <ProjectReference Include="..\..\src\MassTransit.Newtonsoft\MassTransit.Newtonsoft.csproj" />
+    <ProjectReference Include="..\..\src\MassTransit.StateMachineVisualizer\MassTransit.StateMachineVisualizer.csproj" />
+    <ProjectReference Include="..\..\src\MassTransit.TestFramework\MassTransit.TestFramework.csproj" />
+    <ProjectReference Include="..\..\src\MassTransit\MassTransit.csproj" />
+  </ItemGroup>
+
+</Project>

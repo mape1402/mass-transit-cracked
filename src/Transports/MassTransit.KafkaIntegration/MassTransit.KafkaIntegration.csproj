@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="../../../signing.props"/>
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;netstandard2.1;net6.0</TargetFrameworks>
+    <Authors>Denys Kozhevnikov, $(Authors)</Authors>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(IsWindows)' == 'true' ">
+    <TargetFrameworks>$(TargetFrameworks);net462</TargetFrameworks>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <RootNamespace>MassTransit</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>MassTransit.Kafka</PackageId>
+    <Title>MassTransit.Kafka</Title>
+    <PackageTags>MassTransit;Kakfa</PackageTags>
+    <Description>MassTransit Kafka Support; $(Description)</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Confluent.Kafka" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All"/>
+    <ProjectReference Include="..\..\MassTransit\MassTransit.csproj"/>
+  </ItemGroup>
+
+</Project>

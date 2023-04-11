@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net6.0</TargetFrameworks>
+    <RootNamespace>MassTransit</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(IsWindows)' == 'true' ">
+    <TargetFrameworks>$(TargetFrameworks);net462</TargetFrameworks>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>MassTransit.Interop.NServiceBus</PackageId>
+    <Title>MassTransit.Interop.NServiceBus</Title>
+    <PackageTags>MassTransit;NServiceBus</PackageTags>
+    <Description>MassTransit Interoperability support for NServiceBus; $(Description)</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MassTransit.Newtonsoft\MassTransit.Newtonsoft.csproj" />
+    <ProjectReference Include="..\MassTransit\MassTransit.csproj" />
+  </ItemGroup>
+</Project>

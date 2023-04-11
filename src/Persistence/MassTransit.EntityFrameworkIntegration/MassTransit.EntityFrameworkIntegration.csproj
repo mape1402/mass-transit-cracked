@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="../../../signing.props" />
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.1</TargetFrameworks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(IsWindows)' == 'true' ">
+    <TargetFrameworks>$(TargetFrameworks);net462</TargetFrameworks>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <RootNamespace>MassTransit</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>MassTransit.EntityFramework</PackageId>
+    <Title>MassTransit.EntityFramework</Title>
+    <PackageTags>MassTransit;EF;EntityFramework</PackageTags>
+    <Description>MassTransit Entity Framework persistence support; $(Description)</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
+    <ProjectReference Include="..\..\MassTransit\MassTransit.csproj" />
+  </ItemGroup>
+
+</Project>

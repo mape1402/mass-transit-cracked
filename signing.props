@@ -1,0 +1,8 @@
+<Project>
+  <!-- These properties will be used only by projects that sign the assemblies -->
+
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>$(MSBuildThisFileDirectory)MassTransit.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+</Project>

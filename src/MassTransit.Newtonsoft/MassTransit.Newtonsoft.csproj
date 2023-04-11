@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="../../signing.props" />
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net6.0</TargetFrameworks>
+    <RootNamespace>MassTransit</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(IsWindows)' == 'true' ">
+    <TargetFrameworks>$(TargetFrameworks);net462</TargetFrameworks>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>MassTransit.Newtonsoft</PackageId>
+    <Title>MassTransit.Newtonsoft</Title>
+    <PackageTags>MassTransit;Newtonsoft;JSON.NET</PackageTags>
+    <Description>MassTransit Newtonsoft JSON/BSON support; $(Description)</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MassTransit\MassTransit.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
+    <PackageReference Include="Newtonsoft.Json" />
+    <PackageReference Include="Newtonsoft.Json.Bson" />
+  </ItemGroup>
+
+</Project>
