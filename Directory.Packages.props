@@ -6,7 +6,7 @@
     <PackageVersion Include="Apache.NMS.ActiveMQ.NetStd" Version="1.8.0" />
     <PackageVersion Include="AWSSDK.DynamoDBv2" Version="3.7.101.48" />
     <PackageVersion Include="AWSSDK.SimpleNotificationService" Version="3.7.101.13" />
-    <PackageVersion Include="AWSSDK.S3" Version="3.7.103.22"/>
+    <PackageVersion Include="AWSSDK.S3" Version="3.7.103.22" />
     <PackageVersion Include="AWSSDK.SQS" Version="3.7.100.77" />
     <PackageVersion Include="Azure.Identity" Version="1.8.2" />
     <PackageVersion Include="Azure.Messaging.EventHubs.Processor" Version="5.7.5" />
@@ -55,6 +55,7 @@
     <PackageVersion Include="Microsoft.Extensions.Options" Version="6.0.0" />
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.4.1" />
     <PackageVersion Include="Microsoft.SourceLink.GitHub" Version="1.1.1" />
+    <PackageVersion Include="MinVer" Version="4.3.0" />
     <PackageVersion Include="MongoDB.Driver" Version="2.19.0" />
     <PackageVersion Include="MongoDB.Driver.GridFS" Version="2.19.0" />
     <PackageVersion Include="Newtonsoft.Json" Version="13.0.2" />

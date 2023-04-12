@@ -3,6 +3,12 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;netstandard2.1;net6.0</TargetFrameworks>
+    <AssemblyName>MassTransit.Abstractions</AssemblyName>
+    <Title>MassTransit.Abstractions</Title>
+    <Description>MassTransit provides a developer-focused, modern platform for creating distributed applications without complexity. (Without Namespaces lock)</Description>
+    <PackageTags>$(PackageBaseTags)</PackageTags>
+    <Authors>Chris Patterson</Authors>
+    <PackageId>MassTransit.Abstractions.Cracked</PackageId>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(IsWindows)' == 'true' ">
@@ -25,9 +31,25 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
+    <PackageReference Include="MinVer">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Futures\Futures" />
   </ItemGroup>
+
+  <Target Name="Versioning" BeforeTargets="MinVer">
+    <PropertyGroup Label="Build">
+      <MinVerDefaultPreReleasePhase>preview</MinVerDefaultPreReleasePhase>
+      <!-- Tag your repository with the semantic version e.g. '1.0.0' to version all NuGet packages. If you have
+           multiple NuGet packages in your solution and want to version them separately, then uncomment this line
+           and tag your repository with the name of the package followed by the semantic version e.g.
+           'PackageName-1.0.0'. -->
+      <!--<MinVerTagPrefix>$(PackageId)-</MinVerTagPrefix>-->
+      <MinVerVerbosity>normal</MinVerVerbosity>
+    </PropertyGroup>
+  </Target>
 </Project>
