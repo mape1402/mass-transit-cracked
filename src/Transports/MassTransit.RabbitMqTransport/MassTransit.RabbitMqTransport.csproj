@@ -8,7 +8,7 @@
     <Description>MassTransit RabbitMQ transport support; MassTransit provides a developer-focused, modern platform for creating distributed applications without complexity. (Without Namespaces lock)</Description>
     <PackageTags>$(PackageBaseTags)</PackageTags>
     <Authors>Chris Patterson</Authors>
-    <PackageId>Errs-MassTransit.RabbitMq.Cracked</PackageId>
+    <PackageId>ErrsTransit.RabbitMq.Cracked</PackageId>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(IsWindows)' == 'true' ">
