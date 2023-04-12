@@ -19,13 +19,6 @@
     <RootNamespace>MassTransit</RootNamespace>
   </PropertyGroup>
 
-  <PropertyGroup>
-    <PackageId>MassTransit.RabbitMQ</PackageId>
-    <Title>MassTransit.RabbitMQ</Title>
-    <PackageTags>MassTransit;RabbitMQ</PackageTags>
-    <Description>MassTransit RabbitMQ transport support; $(Description)</Description>
-  </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="RabbitMQ.Client" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />

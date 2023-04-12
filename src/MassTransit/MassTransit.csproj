@@ -15,11 +15,6 @@
     <TargetFrameworks>$(TargetFrameworks);net462</TargetFrameworks>
   </PropertyGroup>
 
- <PropertyGroup>
-    <PackageTags>MassTransit</PackageTags>
-    <Description>$(Description)</Description>
-  </PropertyGroup>
-
   <ItemGroup Condition=" '$(TargetFramework)' == 'net462'">
     <Reference Include="System.Transactions" />
     <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" />

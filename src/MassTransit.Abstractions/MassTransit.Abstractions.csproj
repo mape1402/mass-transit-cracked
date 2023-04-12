@@ -20,11 +20,6 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <PropertyGroup>
-    <PackageTags>MassTransit</PackageTags>
-    <Description>$(Description)</Description>
-  </PropertyGroup>
-
   <ItemGroup Condition=" '$(TargetFramework)' == 'net462' ">
     <PackageReference Include="System.ValueTuple" />
   </ItemGroup>
