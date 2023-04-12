@@ -8,7 +8,7 @@
     <Description>MassTransit provides a developer-focused, modern platform for creating distributed applications without complexity. (Without Namespaces lock)</Description>
     <PackageTags>$(PackageBaseTags)</PackageTags>
     <Authors>Chris Patterson</Authors>
-    <PackageId>MassTransit.Abstractions.Cracked</PackageId>
+    <PackageId>Errs-MassTransit.Abstractions.Cracked</PackageId>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(IsWindows)' == 'true' ">
