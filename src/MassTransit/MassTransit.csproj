@@ -3,12 +3,12 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;netstandard2.1;net6.0</TargetFrameworks>
-    <AssemblyName>ErrsTransit</AssemblyName>
-    <Title>ErrsTransit</Title>
+    <AssemblyName>MassTransit</AssemblyName>
+    <Title>MassTransit</Title>
     <Description>MassTransit provides a developer-focused, modern platform for creating distributed applications without complexity. (Without Namespaces lock)</Description>
     <PackageTags>$(PackageBaseTags)</PackageTags>
     <Authors>Chris Patterson</Authors>
-    <PackageId>ErrsTransit.Cracked</PackageId>
+    <PackageId>MassTransit.Cracked</PackageId>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(IsWindows)' == 'true' ">
